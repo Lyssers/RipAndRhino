@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace RhinoGame
 {
-	public class Player : Unit
+	public class MyPlayer : Unit
 	{       
 		/// <summary>
 		/// Movement speed in all directions.

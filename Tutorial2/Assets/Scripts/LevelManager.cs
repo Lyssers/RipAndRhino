@@ -8,7 +8,7 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Instance;
     public GameOver GameOverCanvas;
     public Transform Enemies;
-    public Player Player;
+    public MyPlayer Player;
     [HideInInspector]
     public int EnemiesCount;
     private int _enemiesKilled;
