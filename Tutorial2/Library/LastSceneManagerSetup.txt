@@ -11,3 +11,7 @@ sceneSetups:
   isLoaded: 1
   isActive: 0
   isSubScene: 0
+- path: Assets/Scenes/MultiplayerLobby.unity
+  isLoaded: 1
+  isActive: 0
+  isSubScene: 0

@@ -1,4 +1,5 @@
-﻿using RhinoGame;
+﻿using Photon.Pun;
+using RhinoGame;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,7 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Instance;
     public GameOver GameOverCanvas;
     public Transform Enemies;
-    public MyPlayer Player;
+    public Player Player;
     [HideInInspector]
     public int EnemiesCount;
     private int _enemiesKilled;
@@ -33,10 +34,11 @@ public class LevelManager : MonoBehaviour
 
     private void EnemyKilled()
     {
-         _enemiesKilled++;
+        _enemiesKilled++;
         if(_enemiesKilled == EnemiesCount)
         {
-             GameOverCanvas.ShowGameOver("You won!");
+           
+            GameOverCanvas.ShowGameOver("You won!");
         }
     }
 }
