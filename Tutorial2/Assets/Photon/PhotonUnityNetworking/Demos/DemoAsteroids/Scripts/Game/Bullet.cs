@@ -9,7 +9,7 @@ namespace Photon.Pun.Demo.Asteroids
 
         public void Start()
         {
-            Destroy(gameObject, 3.0f);
+            //Destroy(gameObject, 3.0f);
         }
 
         public void OnCollisionEnter(Collision collision)
@@ -24,7 +24,7 @@ namespace Photon.Pun.Demo.Asteroids
             transform.forward = originalDirection;
 
             Rigidbody rigidbody = GetComponent<Rigidbody>();
-            rigidbody.velocity = originalDirection * 200.0f;
+            rigidbody.velocity = originalDirection * 18f;
             rigidbody.position += rigidbody.velocity * lag;
         }
     }

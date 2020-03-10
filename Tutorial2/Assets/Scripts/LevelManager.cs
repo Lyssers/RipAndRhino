@@ -1,5 +1,4 @@
-﻿using Photon.Pun;
-using RhinoGame;
+﻿using RhinoGame;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -37,7 +36,6 @@ public class LevelManager : MonoBehaviour
         _enemiesKilled++;
         if(_enemiesKilled == EnemiesCount)
         {
-           
             GameOverCanvas.ShowGameOver("You won!");
         }
     }

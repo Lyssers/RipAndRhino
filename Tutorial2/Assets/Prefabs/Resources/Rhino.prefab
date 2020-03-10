@@ -9523,6 +9523,7 @@ GameObject:
   - component: {fileID: 8543322186498151127}
   - component: {fileID: 8543322186498151123}
   - component: {fileID: 8543322186498151122}
+  - component: {fileID: 8347372076799931698}
   - component: {fileID: -6416533325414181656}
   - component: {fileID: 6691564273481057747}
   - component: {fileID: -6772321880726347230}
@@ -9612,7 +9613,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 96
   m_CollisionDetection: 0
 --- !u!65 &8543322186498151122
 BoxCollider:
@@ -9627,6 +9628,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.496002, y: 1.451975, z: 2.101459}
   m_Center: {x: 0, y: 0.6923595, z: 0.00000047683716}
+--- !u!114 &8347372076799931698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8543322186498151133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f5aa9064cbbcb94d9dea0f093ac2f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Trail: {fileID: 496521132437532107}
+  Destruction: {fileID: 5552643350490640460}
+  HealthBar: {fileID: 2061141610}
 --- !u!114 &-6416533325414181656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9639,14 +9655,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e448e9435ad77af438342966d1e06081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Health: 100
   RotationSpeed: 2
   moveSpeed: 10
   FireRate: 0.75
-  Destruction: {fileID: 5552643350490640460}
-  Trail: {fileID: 496521132437532107}
   BulletPrefab: {fileID: 1000010310479910, guid: 0d813bc4f0caead4d85eddf5df4deead,
     type: 3}
   camFollow: {fileID: 0}
+  controllable: 1
   ShootingPos: {fileID: 8543322186654483869}
 --- !u!114 &6691564273481057747
 MonoBehaviour:
@@ -9667,6 +9683,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: -6772321880726347230}
+  - {fileID: 8347372076799931698}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -9895,6 +9912,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7652885990018880880, guid: 003ba0168e97d3f4f8f2847621d6f159,
+        type: 3}
+      propertyPath: PlayerCamera
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7652885989696997033, guid: 003ba0168e97d3f4f8f2847621d6f159,
         type: 3}
       propertyPath: m_MaxValue
@@ -9920,11 +9942,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7652885990018880880, guid: 003ba0168e97d3f4f8f2847621d6f159,
-        type: 3}
-      propertyPath: PlayerCamera
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7652885990018880880, guid: 003ba0168e97d3f4f8f2847621d6f159, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 003ba0168e97d3f4f8f2847621d6f159, type: 3}
@@ -9934,3 +9951,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 7652885989264621763}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2061141610 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7652885989696997033, guid: 003ba0168e97d3f4f8f2847621d6f159,
+    type: 3}
+  m_PrefabInstance: {fileID: 7652885989264621763}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -78,11 +78,11 @@
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Views\PhotonTransformView.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Views\PhotonTransformViewClassic.cs" />
     <None Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonUnityNetworking.asmdef" />
-    <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/alice/Documents/GitHub/unity-gamedev-class/Tutorial2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Users/alice/Documents/GitHub/unity-gamedev-class/Tutorial2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>C:/Users/alice/Documents/GitHub/unity-gamedev-class/Tutorial2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -278,6 +278,9 @@
     </Reference>
     <Reference Include="websocket-sharp">
       <HintPath>C:/Users/alice/Documents/GitHub/unity-gamedev-class/Tutorial2/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:/Users/alice/Documents/GitHub/unity-gamedev-class/Tutorial2/Assets/UnityPackages/JsonNet/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

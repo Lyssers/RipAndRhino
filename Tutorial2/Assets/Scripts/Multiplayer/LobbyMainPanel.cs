@@ -93,7 +93,7 @@ namespace RhinoGame
         {
             string roomName = "Room " + Random.Range(1000, 10000);
 
-            RoomOptions options = new RoomOptions {MaxPlayers = 8};
+            RoomOptions options = new RoomOptions {MaxPlayers = 4};
 
             PhotonNetwork.CreateRoom(roomName, options, null);
         }
@@ -189,8 +189,10 @@ namespace RhinoGame
                     entry.GetComponent<PlayerListEntry>().SetPlayerReady((bool) isPlayerReady);
                 }
             }
-
-            StartGameButton.gameObject.SetActive(CheckPlayersReady());
+            
+                StartGameButton.gameObject.SetActive(CheckPlayersReady());
+            
+            
         }
 
         #endregion
@@ -214,7 +216,7 @@ namespace RhinoGame
 
             byte maxPlayers;
             byte.TryParse(MaxPlayersInputField.text, out maxPlayers);
-            maxPlayers = (byte) Mathf.Clamp(maxPlayers, 2, 8);
+            maxPlayers = (byte) Mathf.Clamp(maxPlayers, 2, 4);
 
             RoomOptions options = new RoomOptions {MaxPlayers = maxPlayers};
 
@@ -275,9 +277,14 @@ namespace RhinoGame
                 return false;
             }
 
+            if (PhotonNetwork.PlayerList.Length < 2)
+            {
+                return false;
+            }
             foreach (Photon.Realtime.Player p in PhotonNetwork.PlayerList)
             {
                 object isPlayerReady;
+               
                 if (p.CustomProperties.TryGetValue(AsteroidsGame.PLAYER_READY, out isPlayerReady))
                 {
                     if (!(bool) isPlayerReady)

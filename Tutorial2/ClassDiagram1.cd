@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="NamePickGui">
+    <Position X="19.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAACAACAAAAAAAAAAAAAAAACAAAAAAAAgAAAA=</HashCode>
+      <FileName>Assets\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Enemy">
+    <Position X="3" Y="4.5" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="Enemy.EnemyKilled" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Enemy.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAAQBAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameOver">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameOver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LevelManager">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAgAEAAAAAAAAEAAAAKQAAAAQAASFA=</HashCode>
+      <FileName>Assets\Scripts\LevelManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameManager">
+    <Position X="12.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAACAAAAAAAAEAAAAAAAQABAAAQEAAAQAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Multiplayer\GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerData" Collapsed="true">
+    <Position X="16.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAEAAAEAAAAAAACAAAAAAQAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Multiplayer\PlayerData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneLoader">
+    <Position X="5.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Assets\Scripts\SceneLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Scoreboard">
+    <Position X="8.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAAAAAgCAAAgAgAAAAAAAAAAAAAAQIEAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\Scoreboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Unit">
+    <Position X="1.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAGIAAAAIABACABAAAAAAAAAAAAQAIABAAgAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Unit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Photon.Realtime.Demo.ConnectAndJoinRandomLb" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEaAAEIAACAAEQAAAEACAIEAAAGBAAIEEAIAAAQAQIA=</HashCode>
+      <FileName>Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RhinoGame.AudioManager">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAADABAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\AudioManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RhinoGame.Bullet">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAgEAAAAAAAgAACAAAAAAAAAAAAAQAJAAAABgAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Bullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RhinoGame.LobbyMainPanel">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gACYgFCAAcCIAAkAAGRAAAgAEWEAAAyEWJAECAgAAMA=</HashCode>
+      <FileName>Assets\Scripts\Multiplayer\LobbyMainPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RhinoGame.MultiplayerLevelManager">
+    <Position X="14.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAMAAIAACAQAIACAMAAAAQgAAABAAAEQACEAggAAEQ=</HashCode>
+      <FileName>Assets\Scripts\Multiplayer\MultiplayerLevelManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RhinoGame.PlayerBullet">
+    <Position X="19.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACIAACAAAAEAAAAAAIAAAAAAAAAAAAIAAAAAAQAgEA=</HashCode>
+      <FileName>Assets\Scripts\Multiplayer\PlayerBullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RhinoGame.PlayerCollision" BaseTypeListCollapsed="true">
+    <Position X="12.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASIAAIAAAAAAAAAAAQARAAAAAAAAAAAABBAkAAAgEA=</HashCode>
+      <FileName>Assets\Scripts\Multiplayer\PlayerCollision.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RhinoGame.PlayerController">
+    <Position X="12.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAGgAAEAAAAAAGAQAAAAAAAAAEEAAAAAAAACAAQEA=</HashCode>
+      <FileName>Assets\Scripts\Multiplayer\PlayerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RhinoGame.PlayerListEntry">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAACABAQAAAEAAAAAAAAAAAAQMAAEIAgAACAA=</HashCode>
+      <FileName>Assets\Scripts\Multiplayer\PlayerListEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RhinoGame.RoomListEntry">
+    <Position X="16.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAECAAAQAAAAAAAAAAAAAAAAAAAAAAAAIAAgA=</HashCode>
+      <FileName>Assets\Scripts\Multiplayer\RoomListEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RhinoGame.Pool">
+    <Position X="18" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAUgEAIAAAEAIAAAAAAgoAEAkEg=</HashCode>
+      <FileName>Assets\Scripts\Pool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RhinoGame.PoolManager">
+    <Position X="21.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIBAAAACAAABAAAAAmAEAAAAAQAAIAAAAAAAAACAAA=</HashCode>
+      <FileName>Assets\Scripts\PoolManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RhinoGame.Player">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEoAAAAAEAQAAAAAAAAAAAQAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Singleplayer\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RhinoGame.SmoothFollowTarget">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAACAAAAUAIAAAIAAAAEIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SmoothFollowTarget.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TanksMP.UIBillboard">
+    <Position X="18" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQAAAAAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAAQAIEA=</HashCode>
+      <FileName>Assets\Scripts\UIBillboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

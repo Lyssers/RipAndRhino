@@ -67,11 +67,11 @@
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoSlotRacer\Scripts\BezierCurve\Editor\BezierSplineInspector.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoSlotRacer\Scripts\BezierCurve\Editor\LineInspector.cs" />
     <None Include="Assets\Photon\PhotonUnityNetworking\Demos\DemoSlotRacer\Scripts\BezierCurve\Editor\PunDemos.DemoSlotcarEditor.asmdef" />
-    <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/alice/Documents/GitHub/unity-gamedev-class/Tutorial2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Users/alice/Documents/GitHub/unity-gamedev-class/Tutorial2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>C:/Users/alice/Documents/GitHub/unity-gamedev-class/Tutorial2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.TestRunner">
       <HintPath>C:/Users/alice/Documents/GitHub/unity-gamedev-class/Tutorial2/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
@@ -273,6 +273,9 @@
     </Reference>
     <Reference Include="websocket-sharp">
       <HintPath>C:/Users/alice/Documents/GitHub/unity-gamedev-class/Tutorial2/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:/Users/alice/Documents/GitHub/unity-gamedev-class/Tutorial2/Assets/UnityPackages/JsonNet/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/Users/alice/Documents/GitHub/unity-gamedev-class/Tutorial2/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>

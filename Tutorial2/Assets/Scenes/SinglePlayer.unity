@@ -2897,7 +2897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameOverCanvas: {fileID: 1644735879}
   Enemies: {fileID: 759734174}
-  Player: {fileID: 8543322186498151132, guid: 05cc76de9be8ea04a9e9f0a0554ccbfc, type: 3}
+  Player: {fileID: 0}
   EnemiesCount: 0
   LimitTime: 0
   TotalTimeToComplete: 0
@@ -7486,6 +7486,11 @@ PrefabInstance:
     - target: {fileID: 1829574079, guid: 05cc76de9be8ea04a9e9f0a0554ccbfc, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543322186498151123, guid: 05cc76de9be8ea04a9e9f0a0554ccbfc,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 96
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05cc76de9be8ea04a9e9f0a0554ccbfc, type: 3}
