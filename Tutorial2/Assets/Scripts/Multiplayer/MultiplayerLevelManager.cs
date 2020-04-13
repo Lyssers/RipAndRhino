@@ -9,7 +9,6 @@ using Hashtable = ExitGames.Client.Photon.Hashtable;
 using Photon.Pun;
 using Photon.Pun.Demo.Asteroids;
 using System;
-using Photon.Pun.Demo.PunBasics;
 
 namespace RhinoGame
 {
