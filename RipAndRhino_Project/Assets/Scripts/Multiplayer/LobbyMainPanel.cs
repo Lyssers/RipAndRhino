@@ -1,7 +1,10 @@
 ﻿using ExitGames.Client.Photon;
+using Photon;
 using Photon.Pun;
 using Photon.Pun.Demo.Asteroids;
 using Photon.Realtime;
+using PlayFab;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -47,20 +50,20 @@ namespace RhinoGame
 
         public void Awake()
         {
+
             PhotonNetwork.AutomaticallySyncScene = true;
 
             cachedRoomList = new Dictionary<string, RoomInfo>();
             roomListEntries = new Dictionary<string, GameObject>();
 
-            if (GameManager.Instance.playerData == null)
-            {
-                PlayerNameInput.text = "Player " + Random.Range(1000, 10000);
-            }
-            else
+            if (GameManager.Instance.playerData.isDataSet)
             {
                 PlayerNameInput.text = GameManager.Instance.playerData.username;
             }
-
+            else
+            {
+                PlayerNameInput.text = "Player " + UnityEngine.Random.Range(1000, 10000);
+            }
         }
 
         #endregion
@@ -99,9 +102,9 @@ namespace RhinoGame
 
         public override void OnJoinRandomFailed(short returnCode, string message)
         {
-            string roomName = "Room " + Random.Range(1000, 10000);
+            string roomName = "Room " + UnityEngine.Random.Range(1000, 10000);
 
-            RoomOptions options = new RoomOptions {MaxPlayers = 4};
+            RoomOptions options = new RoomOptions { MaxPlayers = 8 };
 
             PhotonNetwork.CreateRoom(roomName, options, null);
         }
@@ -125,7 +128,7 @@ namespace RhinoGame
                 object isPlayerReady;
                 if (p.CustomProperties.TryGetValue(AsteroidsGame.PLAYER_READY, out isPlayerReady))
                 {
-                    entry.GetComponent<PlayerListEntry>().SetPlayerReady((bool) isPlayerReady);
+                    entry.GetComponent<PlayerListEntry>().SetPlayerReady((bool)isPlayerReady);
                 }
 
                 playerListEntries.Add(p.ActorNumber, entry);
@@ -194,13 +197,11 @@ namespace RhinoGame
                 object isPlayerReady;
                 if (changedProps.TryGetValue(AsteroidsGame.PLAYER_READY, out isPlayerReady))
                 {
-                    entry.GetComponent<PlayerListEntry>().SetPlayerReady((bool) isPlayerReady);
+                    entry.GetComponent<PlayerListEntry>().SetPlayerReady((bool)isPlayerReady);
                 }
             }
-            
-                StartGameButton.gameObject.SetActive(CheckPlayersReady());
-            
-            
+
+            StartGameButton.gameObject.SetActive(CheckPlayersReady());
         }
 
         #endregion
@@ -220,13 +221,13 @@ namespace RhinoGame
         public void OnCreateRoomButtonClicked()
         {
             string roomName = RoomNameInputField.text;
-            roomName = (roomName.Equals(string.Empty)) ? "Room " + Random.Range(1000, 10000) : roomName;
+            roomName = (roomName.Equals(string.Empty)) ? "Room " + UnityEngine.Random.Range(1000, 10000) : roomName;
 
             byte maxPlayers;
             byte.TryParse(MaxPlayersInputField.text, out maxPlayers);
-            maxPlayers = (byte) Mathf.Clamp(maxPlayers, 2, 4);
+            maxPlayers = (byte)Mathf.Clamp(maxPlayers, 2, 8);
 
-            RoomOptions options = new RoomOptions {MaxPlayers = maxPlayers};
+            RoomOptions options = new RoomOptions { MaxPlayers = maxPlayers };
 
             PhotonNetwork.CreateRoom(roomName, options, null);
         }
@@ -251,11 +252,35 @@ namespace RhinoGame
             {
                 PhotonNetwork.LocalPlayer.NickName = playerName;
                 PhotonNetwork.ConnectUsingSettings();
+                UpdateLeaderboardUsername();
+                
             }
             else
             {
                 Debug.LogError("Player Name is invalid.");
             }
+        }
+
+        private void UpdateLeaderboardUsername()
+        {
+            PlayFabClientAPI.GetPlayerProfile(
+                new PlayFab.ClientModels.GetPlayerProfileRequest(),
+                profileResult =>
+                {
+                    if (profileResult.PlayerProfile.DisplayName != PlayerNameInput.text)
+                    {
+                        PlayFabClientAPI.UpdateUserTitleDisplayName(
+                            new PlayFab.ClientModels.UpdateUserTitleDisplayNameRequest()
+                            {
+                                DisplayName = PlayerNameInput.text
+                            },
+                            displayNameResult => { Debug.Log("PlayFab - Username updated sucessfully!"); },
+                            displayNameError => { Debug.LogError("PlayFab - Error updating the username: " + displayNameError.Error); }
+                        );
+                    }
+                },
+                profileError => { Debug.LogError("PlayFab - Could not get player's profile"); }
+            );
         }
 
         public void OnRoomListButtonClicked()
@@ -285,17 +310,12 @@ namespace RhinoGame
                 return false;
             }
 
-            if (PhotonNetwork.PlayerList.Length < 2)
-            {
-                return false;
-            }
             foreach (Photon.Realtime.Player p in PhotonNetwork.PlayerList)
             {
                 object isPlayerReady;
-               
                 if (p.CustomProperties.TryGetValue(AsteroidsGame.PLAYER_READY, out isPlayerReady))
                 {
-                    if (!(bool) isPlayerReady)
+                    if (!(bool)isPlayerReady)
                     {
                         return false;
                     }
@@ -308,7 +328,7 @@ namespace RhinoGame
 
             return true;
         }
-        
+
         private void ClearRoomListView()
         {
             foreach (GameObject entry in roomListEntries.Values)

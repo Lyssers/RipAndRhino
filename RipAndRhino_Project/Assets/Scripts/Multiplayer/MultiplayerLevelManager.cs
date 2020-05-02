@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 
 using UnityEngine;
 using UnityEngine.UI;
@@ -72,14 +72,13 @@ namespace RhinoGame
 
         private void StartGame()
         {
-            //int stuff = PhotonNetwork.LocalPlayer.GetPlayerNumber();
             var position = PlayerPositions[PhotonNetwork.LocalPlayer.GetPlayerNumber()].position;
             PhotonNetwork.Instantiate("Rhino", position, Quaternion.identity, 0);
         }
 
         public override void OnPlayerPropertiesUpdate(Photon.Realtime.Player targetPlayer, Hashtable changedProps)
         {
-             if (changedProps.ContainsKey("score"))
+            if (changedProps.ContainsKey("score"))
             {
                 CheckEndOfGame();
             }
@@ -93,10 +92,9 @@ namespace RhinoGame
                 return;
             }
             bool showGameOver = false;
-            
+
             foreach (Photon.Realtime.Player p in PhotonNetwork.PlayerList)
             {
-                int stuff = p.GetScore();
                 if (p.GetScore() >= MaxScore)
                 {
                     showGameOver = true;
@@ -136,44 +134,31 @@ namespace RhinoGame
             var score = PhotonNetwork.LocalPlayer.GetScore();
 
             PlayerData playerData = GameManager.Instance.playerData;
-            if (playerData != null)
+            if (score >= playerData.bestScore)
             {
-                if (score >= playerData.bestScore)
-                {
-                    //Set new best
-                    playerData.username = username;
-                    playerData.bestScore = score;
-                    playerData.date = DateTime.UtcNow;
-                    playerData.totalPlayersInTheGame = PhotonNetwork.CurrentRoom.PlayerCount;
-                    playerData.roomName = PhotonNetwork.CurrentRoom.Name;
-                }
-            }
-            else
-            {
-                // Set current score as a new best
-                playerData = new PlayerData()
-                {
-                    username = username,
-                    bestScore = score,
-                    date = DateTime.UtcNow,
-                    totalPlayersInTheGame = PhotonNetwork.CurrentRoom.PlayerCount,
-                    roomName = PhotonNetwork.CurrentRoom.Name
-                };
-            }
+                //Set new best
+                playerData.username = username;
+                playerData.bestScore = score;
+                playerData.date = DateTime.UtcNow;
+                playerData.totalPlayersInTheGame = PhotonNetwork.CurrentRoom.PlayerCount;
+                playerData.roomName = PhotonNetwork.CurrentRoom.Name;
+                playerData.isDataSet = true;
 
-            GameManager.Instance.playerData = playerData;
-            GameManager.Instance.SavePersonalBest();
+                // Update score on the server
+                GameManager.Instance.GlobalLeaderboard.SubmitScore(score);
+                GameManager.Instance.SavePersonalBest();
+            }
         }
 
         private IEnumerator EndOfGame(string winner, int score, Color color)
         {
             GameOverPanel.SetActive(true);
-            float timer = 20.0f;
+            float timer = 5.0f;
 
             while (timer > 0.0f)
             {
                 InfoText.color = color;
-                InfoText.text = string.Format("Player {0} won with {1} points.\n\n\nStart another round or leave {2} seconds remaining.", winner, score, timer.ToString("n2"));
+                InfoText.text = string.Format("Player {0} won with {1} points.\n\n\nReturning to login screen in {2} seconds.", winner, score, timer.ToString("n2"));
 
                 yield return new WaitForEndOfFrame();
 

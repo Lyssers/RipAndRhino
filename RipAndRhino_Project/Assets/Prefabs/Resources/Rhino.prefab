@@ -9802,10 +9802,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8543322186498151121}
     m_Modifications:
-    - target: {fileID: 7652885990018880895, guid: 003ba0168e97d3f4f8f2847621d6f159,
+    - target: {fileID: 7652885988734296069, guid: 003ba0168e97d3f4f8f2847621d6f159,
         type: 3}
-      propertyPath: m_Name
-      value: HealthBarCanvas
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652885988734296069, guid: 003ba0168e97d3f4f8f2847621d6f159,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652885989696997033, guid: 003ba0168e97d3f4f8f2847621d6f159,
+        type: 3}
+      propertyPath: m_MaxValue
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652885989696997033, guid: 003ba0168e97d3f4f8f2847621d6f159,
+        type: 3}
+      propertyPath: m_WholeNumbers
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652885989696997033, guid: 003ba0168e97d3f4f8f2847621d6f159,
+        type: 3}
+      propertyPath: m_Value
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652885990018880880, guid: 003ba0168e97d3f4f8f2847621d6f159,
+        type: 3}
+      propertyPath: PlayerCamera
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7652885990018880892, guid: 003ba0168e97d3f4f8f2847621d6f159,
         type: 3}
@@ -9912,35 +9937,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 7652885990018880880, guid: 003ba0168e97d3f4f8f2847621d6f159,
+    - target: {fileID: 7652885990018880895, guid: 003ba0168e97d3f4f8f2847621d6f159,
         type: 3}
-      propertyPath: PlayerCamera
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7652885989696997033, guid: 003ba0168e97d3f4f8f2847621d6f159,
-        type: 3}
-      propertyPath: m_MaxValue
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7652885989696997033, guid: 003ba0168e97d3f4f8f2847621d6f159,
-        type: 3}
-      propertyPath: m_WholeNumbers
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7652885989696997033, guid: 003ba0168e97d3f4f8f2847621d6f159,
-        type: 3}
-      propertyPath: m_Value
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7652885988734296069, guid: 003ba0168e97d3f4f8f2847621d6f159,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7652885988734296069, guid: 003ba0168e97d3f4f8f2847621d6f159,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
+      propertyPath: m_Name
+      value: HealthBarCanvas
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7652885990018880880, guid: 003ba0168e97d3f4f8f2847621d6f159, type: 3}
