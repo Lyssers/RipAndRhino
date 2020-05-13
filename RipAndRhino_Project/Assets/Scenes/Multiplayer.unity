@@ -2042,12 +2042,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c1b7eb3905d5694688d9bb9fe2c0d47, type: 3}
---- !u!4 &354901381 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2077914102, guid: 7a28a6312eb4a5f43b8b29b6868a8a9e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1453595850}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &364858154
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2341,7 +2335,6 @@ Transform:
   m_Children:
   - {fileID: 1074451606}
   - {fileID: 1579662743}
-  - {fileID: 505305010}
   - {fileID: 1191329447}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -2547,56 +2540,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8732d563a511d834e823ac895b8a4004, type: 3}
---- !u!1 &505305009
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 505305010}
-  - component: {fileID: 505305011}
-  m_Layer: 0
-  m_Name: LevelManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &505305010
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 505305009}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 487592313}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &505305011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 505305009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65f94b1bd96042241bd3fb4af5e8e747, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameOverCanvas: {fileID: 3350723564892303603, guid: d0718b6ebc74c73458ae1ae56368aa1c,
-    type: 3}
-  Enemies: {fileID: 1809388586485947544, guid: 14f7a4912efdd7846b26c70a43efb6d8, type: 3}
-  Player: {fileID: 0}
-  EnemiesCount: 0
-  LimitTime: 0
-  TotalTimeToComplete: 0
 --- !u!1001 &525014193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6852,7 +6795,7 @@ PrefabInstance:
     - target: {fileID: 952896881609142334, guid: e4dac63be619034459604b527605aa9c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 952896881609142334, guid: e4dac63be619034459604b527605aa9c,
         type: 3}
@@ -8297,11 +8240,10 @@ MonoBehaviour:
   - {fileID: 1763447761}
   - {fileID: 1814148499}
   - {fileID: 987016183}
-  - {fileID: 354901381}
   TimerPanel: {fileID: 1074208896}
   TimerText: {fileID: 851675300}
   HasTimeLimit: 1
-  TimeLimit: 60
+  TimeLimit: 80
 --- !u!1001 &2064066465
 PrefabInstance:
   m_ObjectHideFlags: 0

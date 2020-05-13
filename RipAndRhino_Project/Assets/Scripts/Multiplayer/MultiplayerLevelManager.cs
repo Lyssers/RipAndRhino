@@ -14,7 +14,7 @@ namespace RhinoGame
 {
     public class MultiplayerLevelManager : MonoBehaviourPunCallbacks
     {
-        public static MultiplayerLevelManager Instance = null;
+        public static MultiplayerLevelManager Instance;
         public int MaxScore = 5;
         public GameObject GameOverPanel;
         public Text InfoText;
@@ -72,6 +72,7 @@ namespace RhinoGame
 
         private void StartGame()
         {
+            Debug.Log(PhotonNetwork.LocalPlayer.GetPlayerNumber());
             var position = PlayerPositions[PhotonNetwork.LocalPlayer.GetPlayerNumber()].position;
             PhotonNetwork.Instantiate("Rhino", position, Quaternion.identity, 0);
         }

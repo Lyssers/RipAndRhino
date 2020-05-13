@@ -14,7 +14,6 @@ namespace RhinoGame
         /// </summary>
         public float FireRate = 0.75f;
         public GameObject BulletPrefab;
-        [HideInInspector]
         public SmoothFollowTarget camFollow;
         [HideInInspector]
         public bool controllable = true;
